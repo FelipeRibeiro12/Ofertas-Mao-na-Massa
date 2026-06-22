@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofertas Mão na Massa — Entre no grupo</title>
+    <meta
+      name="description"
+      content="Cupons e ofertas de ferramentas e materiais direto no WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0e1b2b;
+        --bg-raised: #16273a;
+        --bg-raised-2: #1c3349;
+        --yellow: #f0b92e;
+        --teal: #4fb8c4;
+        --silver: #c9cfd6;
+        --text: #f5f7fa;
+        --text-mute: #8fa3b8;
+        --border: #243b52;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--yellow);
+        outline-offset: 3px;
+      }
+
+      .pegboard {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          circle,
+          rgba(245, 247, 250, 0.06) 1.6px,
+          transparent 1.6px
+        );
+        background-size: 26px 26px;
+        pointer-events: none;
+      }
+
+      .wrap {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+      }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        position: relative;
+        padding: 48px 0 36px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .badge-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        margin: 0 auto 22px;
+        overflow: hidden;
+        border: 2px solid var(--yellow);
+        box-shadow: 0 8px 24px rgba(240, 185, 46, 0.25);
+      }
+      .badge-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .eyebrow {
+        font-family: "Space Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--yellow);
+        margin: 0 0 14px;
+      }
+
+      h1 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        font-size: clamp(32px, 9vw, 44px);
+        line-height: 1.08;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        margin: 0 0 16px;
+      }
+      h1 span {
+        color: var(--yellow);
+      }
+
+      .sub {
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--text-mute);
+        margin: 0 auto 30px;
+        max-width: 360px;
+      }
+
+      /* tape-measure dial signature element */
+      .tape-dial {
+        position: absolute;
+        top: 14px;
+        right: -10px;
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+        background: repeating-conic-gradient(
+          var(--yellow) 0deg 3deg,
+          transparent 3deg 10deg
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(4deg);
+      }
+      .tape-dial::before {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border-radius: 50%;
+        background: var(--bg);
+      }
+      .tape-dial-inner {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        font-family: "Space Mono", monospace;
+        color: var(--text);
+      }
+      .tape-dial-inner .pct {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--yellow);
+      }
+      .tape-dial-inner .off {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        color: var(--text-mute);
+      }
+
+      @media (max-width: 380px) {
+        .tape-dial {
+          width: 86px;
+          height: 86px;
+          right: -14px;
+        }
+        .tape-dial-inner .pct {
+          font-size: 18px;
+        }
+      }
+
+      /* ---------- CTA BUTTON ---------- */
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 17px 20px;
+        background: var(--yellow);
+        color: #14202e;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 16.5px;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0 10px 26px rgba(240, 185, 46, 0.25);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(240, 185, 46, 0.32);
+      }
+      .cta:active {
+        transform: translateY(0);
+      }
+      .cta svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
+      .cta-note {
+        text-align: center;
+        font-size: 12.5px;
+        color: var(--text-mute);
+        margin: 12px 0 0;
+      }
+
+      /* ---------- BENEFITS ---------- */
+      .benefits {
+        position: relative;
+        padding: 38px 0 40px;
+        border-top: 1px solid var(--border);
+      }
+
+      .benefit-row {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+      .benefit-row + .benefit-row {
+        border-top: 1px solid var(--border);
+      }
+
+      .benefit-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 9px;
+        background: var(--bg-raised-2);
+        border: 1px solid var(--teal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 18px;
+      }
+
+      .benefit-text strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 2px;
+      }
+      .benefit-text span {
+        font-size: 13.5px;
+        color: var(--text-mute);
+        line-height: 1.45;
+      }
+
+      /* ---------- SECOND CTA ---------- */
+      .cta-section {
+        padding: 8px 0 44px;
+        text-align: center;
+      }
+      .cta-section p {
+        font-size: 14.5px;
+        color: var(--text-mute);
+        margin: 0 0 18px;
+      }
+
+      /* ---------- DISCLOSURE / FOOTER ---------- */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 22px 0 36px;
+        text-align: center;
+      }
+      .disclosure {
+        font-size: 12px;
+        color: var(--text-mute);
+        line-height: 1.6;
+        max-width: 340px;
+        margin: 0 auto 14px;
+      }
+      .footer-name {
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: #5a7186;
+        text-transform: uppercase;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="pegboard" aria-hidden="true"></div>
+        <div class="tape-dial" aria-hidden="true">
+          <div class="tape-dial-inner">
+            <div class="pct">70%</div>
+            <div class="off">OFF</div>
+          </div>
+        </div>
+
+        <div class="badge-icon">
+          <img
+            src="703961B1-D57B-44C0-9A94-F7759834026D_1_201_a.jpeg"
+            alt="Logo Ofertas Mão na Massa — ferramentas e materiais"
+          />
+        </div>
+
+        <p class="eyebrow">Ofertas Mão na Massa</p>
+        <h1>Ferramenta e material <span>com desconto</span>, direto no zap</h1>
+        <p class="sub">Selecionamos as melhores Promoções e Cupons para você</p>
+
+        <a
+          class="cta"
+          href="https://whatsapp.com/channel/0029VbDBqde3bbV54iCHn93w"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3-.6-2.5-1-4.1-3.5-4.2-3.7-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.2.1.3 0 .5-.3.5-.6.8-.9 1.1-.1.1-.2.3 0 .5.5.9 1.1 1.6 1.9 2.2.7.5 1.3.8 1.6.9.2.1.4.1.5-.1l.8-1c.2-.2.4-.3.6-.2l1.7.8c.2.1.4.2.4.4.1.2.1.7-.1 1.3z"
+            />
+          </svg>
+          Entrar no grupo grátis
+        </a>
+        <p class="cta-note">Totalmente grátis</p>
+      </section>
+
+      <section class="benefits" aria-label="O que você recebe no grupo">
+        <div class="benefit-row">
+          <div class="benefit-icon">💵</div>
+          <div class="benefit-text">
+            <strong>Ofertas todos os dias</strong>
+          </div>
+        </div>
+        <div class="benefit-row">
+          <div class="benefit-icon">🎟️</div>
+          <div class="benefit-text">
+            <strong>Cupons toda semana</strong>
+          </div>
+        </div>
+        <div class="benefit-row">
+          <div class="benefit-icon">🚚</div>
+          <div class="benefit-text">
+            <strong>Frete grátis em vários itens</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <p>Leva menos de 10 segundos pra entrar</p>
+        <a
+          class="cta"
+          href="https://whatsapp.com/channel/0029VbDBqde3bbV54iCHn93w"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3-.6-2.5-1-4.1-3.5-4.2-3.7-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.2.1.3 0 .5-.3.5-.6.8-.9 1.1-.1.1-.2.3 0 .5.5.9 1.1 1.6 1.9 2.2.7.5 1.3.8 1.6.9.2.1.4.1.5-.1l.8-1c.2-.2.4-.3.6-.2l1.7.8c.2.1.4.2.4.4.1.2.1.7-.1 1.3z"
+            />
+          </svg>
+          Entrar no grupo grátis
+        </a>
+      </section>
+
+      <footer>
+        <p class="disclosure">
+          Este grupo usa links de afiliado em algumas ofertas — isso não altera
+          o preço final pra você, mas pode gerar uma comissão. Não temos vínculo
+          oficial com Mercado Livre, Amazon ou outras marcas citadas.
+        </p>
+        <p class="footer-name">Ofertas Mão na Massa</p>
+      </footer>
+    </main>
+  </body>
+</html>
